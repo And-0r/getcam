@@ -1,0 +1,13 @@
+RegisterCommand("getcam", function()
+    local camCoords = GetGameplayCamCoord()
+    local camRot = GetGameplayCamRot(2) -- 2 = relative rotation
+
+    local a = camCoords.x
+    local b = camCoords.y
+    local c = camCoords.z
+    local d = camRot.x
+    local e = camRot.y
+    local f = camRot.z
+
+    print(string.format("Camera Coords: a=%.2f, b=%.2f, c=%.2f, d=%.2f, e=%.2f, f=%.2f", a, b, c, d, e, f))
+end, false)
